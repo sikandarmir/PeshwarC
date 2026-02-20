@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeshwarSafeCar - Home</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        /* Header */
+        header {
+            background-color: #0B3D91;
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .logo h1 {
+            color: #FFD700;
+            font-size: 28px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #FFD700;
+            color: #0B3D91;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Hero image */
+        .hero {
+            width: 100%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        main {
+            width: 90%;
+            margin: 20px auto;
+            min-height: 70vh;
+        }
+
+        /* Welcome section */
+        .welcome {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .welcome h2 {
+            color: #0B3D91;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .welcome p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* About section */
+        .about {
+            background-color: #f4f4f4;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about h2 {
+            color: #0B3D91;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .about .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 15px;
+        }
+
+        .about .stat {
+            background-color: #fff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .about .stat h3 {
+            color: #0B3D91;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        .about .stat p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Reviews */
+        .reviews {
+            text-align: center;
+        }
+
+        .reviews h2 {
+            color: #0B3D91;
+            margin-bottom: 20px;
+        }
+
+        .review-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .review-card {
+            background-color: #fff;
+            padding: 15px 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: left;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .review-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review-card p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .review-card span {
+            font-weight: bold;
+            color: #0B3D91;
+            font-size: 13px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #0B3D91;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="PeshwarSafeCar Logo">
+                <h1>PeshwarSafeCar</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('quote') }}">Get a Quote</a></li>
+                    <li><a href="{{ url_for('location') }}">Location</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Image -->
+       <!-- Hero Image -->
+<div class="hero">
+    <img src="{{ url_for('static', filename='images/frontimage.jpg') }}" alt="Front Image">
+</div>
+
+<style>
+.hero {
+    width: 100%;
+    max-height: 100%; /* adjust height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures full coverage without distortion */
+    display: block;
+}
+</style>
+
+        <!-- Welcome Section -->
+         <br>
+         
+        <div class="welcome">
+            <h2>Welcome to PeshwarSafeCar</h2>
+            <p>Your trusted car insurance provider in Peshwar. Reliable, professional, and customer-focused.</p>
+        </div>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Us</h2>
+            <p>With over <strong>50 years of experience</strong>, PeshwarSafeCar has served thousands of satisfied clients in the Peshwar region. Our expertise ensures the best coverage for your vehicle.</p>
+            <div class="stats">
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat">
+                    <h3>10,000+</h3>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Reviews -->
+        <section class="reviews">
+            <h2>What Our Clients Say</h2>
+            <div class="review-cards">
+                <div class="review-card">
+                    <img src="{{ url_for('static', filename='images/man1.jpg') }}" alt="Adnan Khan">
+                    <div>
+                        <p>Excellent service, very professional and quick to respond.</p>
+                        <span>- Adnan Khan</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <img src="{{ url_for('static', filename='images/man2.jpg') }}" alt="Ikram Ali">
+                    <div>
+                        <p>Friendly staff and great coverage options. I feel safe with PeshwarSafeCar.</p>
+                        <span>- Ikram Ali</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <img src="{{ url_for('static', filename='images/man3.jpg') }}" alt="Majed Khan">
+                    <div>
+                        <p>Affordable and reliable car insurance. Customer support is amazing!</p>
+                        <span>- Majed Khan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PeshwarSafeCar. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
